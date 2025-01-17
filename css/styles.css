@@ -1,0 +1,520 @@
+/* ______________________F O N T S_______________________ */
+
+/* #region FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* #endregion FONTS */
+
+
+
+/* #region */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1300px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", serif;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  position: relative;
+  z-index: -3;
+}
+/* 
+.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #000000f0;
+  transition: all 0.3s;
+}
+
+.loading .a {
+  border: 10px solid brown;
+  border-right-color: transparent;
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  transform: rotate(720deg);
+}
+
+.loading .b {
+  border: 10px solid brown;
+  border-bottom-color: transparent;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+}
+
+.loading h1 {
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: 200px;
+  --bs-text-opacity: 1;
+  color: brown;
+} */
+
+/* #endregion */
+
+
+
+/* _____________________hero______________________ */
+
+/* #region hero */
+
+#carouselExampleSlidesOnly,
+.carousel-inner,
+.carousel-item  {
+  position: relative;
+  height: 100vh;
+  z-index: -5;
+}
+
+.back-img {
+  position: relative;
+  height: 100vh;
+  min-width: 100%;
+  z-index: -5;
+  object-fit: cover;
+}
+
+.hero {
+  min-height: 100vh;
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.hero .container {
+  min-height: 100vh;
+}
+
+.hero .container .item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  min-height: 100vh;
+}
+
+.hero .container .item .img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero .container .item .img::after,
+.hero .container .item .img::before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: conic-gradient(from var(--angle), #007bff, #007bff, #d814ff, #d814ff, transparent 90%);
+  z-index: -1;
+  border-radius: 50%;
+  animation: 4s spin linear infinite;
+}
+
+.hero .container .item .img::before {
+  filter: blur(1rem);
+  opacity: 0.7;
+}
+
+.hero .container .item .img .radius {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container .item .img img {
+  width: 100%;
+}
+
+.hero .container .item p {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  max-width: 650px;
+}
+
+.hero .container .item .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* #endregion hero */
+
+
+
+/* _____________________cards______________________ */
+
+/* #region cards */
+
+.cards {
+  padding: 50px 0;
+}
+
+.cards h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.row-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cards .card {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 300px;
+  width: 238px;
+  position: relative;
+  border-radius: 6px;
+  border: none;
+  padding: 15px 14px;
+  text-align: center;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.cards .card:hover::after, .cards .card:hover::before{
+  opacity: 1;
+}
+
+.cards .card::after, .cards .card::before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 8px);
+  width: calc(100% + 8px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: conic-gradient(from var(--angle), #007bff, #d814ff, transparent 90%);
+  z-index: -1;
+  border-radius: 8px;
+  animation: 4s spin linear infinite;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.cards .card:hover::before {
+  opacity: 0.5;
+}
+
+.cards .card::before {
+  transition: all 0.3s;
+  filter: blur(1.1rem);
+  opacity: 0;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+    --angle: 360deg;
+  }
+}
+
+.cards .card .img-man {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.cards .card .img-man img {
+  width: 100%;
+}
+
+.cards .card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards .card .text h4 {
+  font-size: 20px;
+}
+
+.cards .card .text a {
+  width: 150px;
+  height: 40px;
+  background-image: conic-gradient(from var(--angle), #d814ff84, #007bff84, #d814ff7f );
+  animation: 3s spin linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+@media (max-width: 542px) {
+  .cards .card::after, .cards .card::before{
+    opacity: 1;
+  }
+}
+
+/* #endregion cards */
+
+
+
+/* _____________________projects______________________ */
+
+/* #region projects */
+
+.projects {
+  margin-bottom: 100px;
+}
+
+.projects .items h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects .items .project-1 {
+  display: flex;
+  gap: 30px 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.05);
+}
+
+.projects .item {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  gap: 20px;
+  align-items: center;
+}
+
+.projects .item img {
+  width: 100%;
+}
+
+.projects .item h3 {
+  color: #2D3034;
+  font-size: 25px;
+}
+
+.projects .item div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects .item div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.projects .item div h5,
+.projects .item div p {
+  margin-left: auto;
+  margin-right: auto;
+  color: #2D3034;
+}
+
+.projects .item div p {
+  font-size: 16px;
+}
+
+.projects .item .github {
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 17px;
+  color: #2D3034;
+  font-weight: 700;
+  gap: 18px;
+  border: 2px solid #2D3034;
+  transition: all 0.4s;
+}
+
+.projects .item .github svg path,
+.projects .item .demo svg path  {
+  transition: all 0.4s;
+}
+
+.projects .item .github:hover {
+  background: #2D3034;
+  color: #fff;
+}
+
+.projects .item .github:hover svg path {
+  fill: #fff;
+}
+
+.projects .item .demo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 17px;
+  color: #B40712;
+  font-weight: 700;
+  gap: 18px;
+  border: 2px solid #B40712;
+  transition: all 0.4s;
+}
+
+.projects .item .demo:hover {
+  background: #B40712;
+  color: #fff;
+}
+
+.projects .item .demo:hover svg path {
+  fill: #fff;
+}
+
+
+
+/* #endregion projects */
+
+
+
+/* _____________________footer______________________ */
+
+/* #region footer */
+
+footer {
+  background-color: #282828;
+}
+
+footer .text {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .text p {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+/* #endregion footer */
