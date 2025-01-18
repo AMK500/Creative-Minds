@@ -316,12 +316,6 @@ body {
   border-radius: 6px;
 }
 
-@media (max-width: 542px) {
-  .cards .card::after, .cards .card::before{
-    opacity: 1;
-  }
-}
-
 /* #endregion cards */
 
 
