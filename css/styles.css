@@ -279,6 +279,11 @@ body {
   height: 100px;
   overflow: hidden;
   border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.cards .card .img-man:hover {
+  transform: scale(1.2);
 }
 
 .cards .card .img-man img {
