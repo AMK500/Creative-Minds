@@ -137,9 +137,12 @@ header .row .lang:hover {
 
 
 @media (max-width: 530px) {
-  .btn-primary,
-  header .row .offcanvas-body .lang {
+  .btn-primary{
     display: block;
+  }
+  
+  header .row .offcanvas-body .lang {
+    display: flex;
   }
 
   header .row .lang,
@@ -149,7 +152,6 @@ header .row .lang:hover {
 }
 
 /* #endregion header */
-
 
 
 
