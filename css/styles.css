@@ -116,6 +116,22 @@ header .row .lang:hover {
   box-shadow: none;
 }
 
+.offcanvas-header {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offcanvas-header .btn-close {
+  height: auto;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .offcanvas-header h5 {
   color: #fff;
 }
