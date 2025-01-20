@@ -41,54 +41,119 @@ body {
   position: relative;
   z-index: -3;
 }
-/* 
-.loading {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 13;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #000000f0;
-  transition: all 0.3s;
-}
-
-.loading .a {
-  border: 10px solid brown;
-  border-right-color: transparent;
-  width: 120px;
-  height: 120px;
-  position: fixed;
-  transform: rotate(720deg);
-}
-
-.loading .b {
-  border: 10px solid brown;
-  border-bottom-color: transparent;
-  width: 80px;
-  height: 80px;
-  position: fixed;
-}
-
-.loading h1 {
-  font-size: 30px;
-  font-weight: 700;
-  padding-top: 200px;
-  --bs-text-opacity: 1;
-  color: brown;
-} */
 
 /* #endregion */
 
 
 
-/* _____________________hero______________________ */
+
+/* ___________________header_______________________ */
+
+/* #region header */
+
+header {
+  position: fixed;
+  width: 100%;
+  background: #000000;
+  top: 0;
+  z-index: 9999;
+}
+
+header .row {
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+header .row .logos {
+  display: flex;
+  gap: 20px;
+  width: auto;
+  padding: 0;
+}
+
+header .row .logos svg {
+  width: auto;
+  height: 45px;
+}
+
+header .row .lang {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+header .row .lang span {
+  color: #fff;
+  font-size: 20px;
+}
+
+header .row .lang svg {
+  width: auto;
+  height: 25px;
+}
+
+header .row .lang:hover {
+  opacity: 1;
+}
+
+.btn-primary {
+  display: none;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-close {
+  width: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.offcanvas-header h5 {
+  color: #fff;
+}
+
+#offcanvasRight {
+  background: #000;
+  width: 280px;
+}
+
+.offcanvas-body  {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.offcanvas-body .logos {
+  flex-direction: column;
+}
+
+
+@media (max-width: 530px) {
+  .btn-primary,
+  header .row .offcanvas-body .lang {
+    display: block;
+  }
+
+  header .row .lang,
+  header .row .logos .tera {
+    display: none;
+  }
+}
+
+/* #endregion header */
+
+
+
+
+/* ______________________hero_________________________ */
 
 /* #region hero */
 
@@ -195,7 +260,7 @@ body {
 
 
 
-/* _____________________cards______________________ */
+/* ______________________cards________________________ */
 
 /* #region cards */
 
@@ -496,7 +561,7 @@ body {
 /* #region footer */
 
 footer {
-  background-color: #282828;
+  background-color: #000000;
 }
 
 footer .text {
